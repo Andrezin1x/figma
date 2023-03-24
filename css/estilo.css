@@ -4,19 +4,31 @@
     padding: 0;
     outline: 0;
 }
+header{
+    padding: 20px 0;
+    height: 6rem;
+    background-color: black;
+    display: flex;
 
-header {
-    background-color: #000000;
-    height: 4.5rem;
 }
 header img{
     height: 100%;
-    padding: 0.5rem;
+}
+header nav{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+}
+header nav a{
+    margin-right: 15px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
 }
 
 footer {
     background-color:  #000000;
-    height: 4.5rem;
+    height: 6rem;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -24,21 +36,4 @@ footer {
 footer img{
     height: 100%;
     padding: 0.3rem;
-}
-
-body#main{
-    background-image: url("../img/fundo.webp");
-    background-size: cover;
-    
-}
-
-main{
-    height: 84vh;
-}
-
-body.page2 {
-    background-image: url("../img/gaviao.jpg");
-    background-size: cover;
-    background-image: url("../img/c96367b90b43bcb8c726f472423e1c3091f43bc0.jpeg");
-    background-size: var(50%);
 }
