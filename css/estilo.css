@@ -3,37 +3,71 @@
     margin: 0;
     padding: 0;
     outline: 0;
-}
-header{
+    }
+    body
+    header{
     padding: 20px 0;
     height: 6rem;
     background-color: black;
     display: flex;
-
-}
-header img{
+    }
+    header img{
     height: 100%;
-}
-header nav{
+    margin-left: 1rem;
+    }
+    header nav{
     display: flex;
     align-items: center;
     justify-content: flex-end;
     width: 100%;
-}
-header nav a{
+    }
+    header nav a{
     margin-right: 15px;
     color: rgb(255, 255, 255);
     text-decoration: none;
-}
-
-footer {
-    background-color:  #000000;
-    height: 6rem;
+    }
+    footer {
+    background-color: #000000;
+    height: 4rem;
+    width: 100%;
     position: fixed;
     bottom: 0;
-    width: 100%;
-}
-footer img{
+    }
+    footer img{
     height: 100%;
     padding: 0.3rem;
-}
+    }
+    main#carioca{
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../img/fundo.webp);
+    background-attachment: fixed;
+    min-height: calc(100vh - 10rem);
+    }
+    header input{
+    border-radius: 2rem;
+    border-color: crimson;
+    }
+    footer{
+    background-color: #000000;
+    height: 4rem;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    }
+    footer img{
+    height: 100%;
+    padding: 0.3rem;
+    }
+    footer.zeraFix{
+    position: static ;
+    }
+    .fotos img{
+    width: 100%;
+    }
+
+    a:hover {
+        color: #F00;
+        background-color: black;
+       }
