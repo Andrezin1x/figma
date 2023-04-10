@@ -1,73 +1,241 @@
-*{
+* {
+    color: white;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     outline: 0;
-    }
-    body
-    header{
+}
+
+body header {
     padding: 20px 0;
     height: 6rem;
     background-color: black;
     display: flex;
-    }
-    header img{
+}
+
+header img {
     height: 100%;
     margin-left: 1rem;
-    }
-    header nav{
+}
+
+header nav {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     width: 100%;
-    }
-    header nav a{
+}
+
+header nav a {
     margin-right: 15px;
     color: rgb(255, 255, 255);
     text-decoration: none;
-    }
-    footer {
+}
+
+footer {
     background-color: #000000;
     height: 4rem;
     width: 100%;
     position: fixed;
     bottom: 0;
-    }
-    footer img{
+}
+
+footer img {
     height: 100%;
     padding: 0.3rem;
-    }
-    main#carioca{
+}
+
+main#carioca {
     width: 100vw;
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(../img/fundo.webp);
     background-attachment: fixed;
     min-height: calc(100vh - 10rem);
-    }
-    header input{
+}
+
+header input {
     border-radius: 2rem;
     border-color: crimson;
-    }
-    footer{
+}
+
+footer {
     background-color: #000000;
     height: 4rem;
     width: 100%;
     position: fixed;
     bottom: 0;
-    }
-    footer img{
+}
+
+footer img {
     height: 100%;
     padding: 0.3rem;
-    }
-    footer.zeraFix{
-    position: static ;
-    }
-    .fotos img{
+}
+
+footer.zeraFix {
+    position: static;
+}
+
+main#fotos img {
+    width: 10%;
+    
+}
+
+a:hover {
+    color: #F00;
+}
+
+#menu {
+    width: 50%;
+    float: right;
+}
+
+#menu ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#menu ul li {
+    display: inline-block;
+    font-size: 1.7rem;
+
+}
+
+#menu ul li a
+
+#menu ul li:hover a {
+    text-decoration: underline;
+}
+
+input#checkmenu {
+    display: none;
+
+}
+
+/*Menu responsivo*/
+
+#labelmenu {
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    height: 100%;
+    align-self: flex-end;
+}
+
+.menuburguer {
+    margin-right: 3%;
+    height: 100%;
+}
+
+/*para a navegação não encostar no título*/
+@media(max-width:1542px) {
+    #menu ul {
+        padding-right: 2%;
     }
 
-    a:hover {
-        color: #F00;
-        background-color: black;
-       }
+    #menu ul li {
+        font-size: 1.3em;
+    }
+}
+
+
+@media(max-width:1261px) {
+
+    /*menu vai desaparecer*/
+    #menu {
+        display: none;
+        height: calc(100vh - 7rem);
+        width: 100%;
+        justify-content: right;
+
+    }
+
+    #menu ul {
+        flex-wrap: wrap;
+        background-color: var(--primary);
+        height: 100%;
+        width: 50%;
+        align-content: flex-start;
+        padding-right: 2%;
+
+    }
+
+    /*Esconderemos a ul*/
+    input#checkmenu~#menu ul {
+        position: absolute;
+        right: -100%;
+        animation: appear;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
+        transition: right 3s;
+
+    }
+
+    /*para que a ul, escondida à direita, apareça*/
+    @keyframes appear {
+        100% {
+            right: 0;
+        }
+    }
+
+
+    #menu ul li {
+        width: 100%;
+        text-align: right;
+        display: block;
+        height: calc(7rem/3);
+        padding: 2% 0;
+    }
+
+    .menuburguer {
+        display: flex;
+        width: 30px;
+        height: 30px;
+        flex-wrap: wrap;
+    }
+
+    /*Animação*/
+    /*Quando apertarmos o label, o menu vai aparecer*/
+    input#checkmenu:checked~#menu {
+        display: flex;
+        backdrop-filter: blur(5px);
+    }
+
+    /*para que rode quando clicar*/
+    input#checkmenu:checked~label .menuburguer {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        rotate: 45deg;
+    }
+
+    input#checkmenu:checked~label #hamburguer1::before {
+        position: absolute;
+        rotate: -90deg;
+    }
+
+
+    .hamburguer,
+    .hamburguer::before {
+        display: block;
+        height: 5%;
+        background-color: rgb(255, 255, 255);
+        width: 100%;
+        transition: rotate 1s;
+
+    }
+
+    .hamburguer::before {
+        display: block;
+        content: '';
+    }
+
+
+
+
+
+}
+ 
+
