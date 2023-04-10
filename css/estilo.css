@@ -238,4 +238,29 @@ input#checkmenu {
 
 }
  
+main#fundonot {
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../img/fundo.webp);
+    min-height: calc(100vh - 10rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 75px;
+    flex-wrap: wrap;
+}
 
+main#fotosc{
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../img/jogador-pode-trocar-corinthians-rival-paulusta.jpg);
+    background-attachment: fixed;
+    min-height: calc(100vh - 10rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 75px;
+    flex-wrap: wrap;
+}
